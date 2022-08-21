@@ -1,0 +1,64 @@
+.text-updater-node {
+  padding: 0 20px;
+  border-radius: 5px;
+  background: white;
+  box-sizing: border-box;
+  border: 6px solid #f2f3f3 !important;
+  outline: 4px solid #f2f3f3 !important;
+  border-radius: 50px;
+}
+
+.text-updater-node.root {
+  background-color: #73d6ac !important;
+}
+
+.text-updater-node.root .label {
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  min-height: 69px;
+}
+
+.text-updater-node.selected {
+  border: 6px solid #f2f3f3 !important;
+  outline: 4px solid #73d6ac !important;
+}
+
+.text-updater-node .text-container {
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+.text-updater-node.selected {
+  border: 3px solid rgb(67, 67, 67);
+}
+
+.text-updater-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+}
+
+.label {
+  transform: translate(0, 30%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+  max-width: 160px;
+  height: 53px;
+  text-align: center;
+  font-size: 17px;
+  min-height: 28.59px;
+  max-height: 100%;
+  text-align: center;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  align-items: center;
+}
