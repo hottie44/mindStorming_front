@@ -15,3 +15,6 @@ https://user-images.githubusercontent.com/76799354/185774494-284d44d1-e628-4f91-
 # 빈칸 색상 수정
 https://user-images.githubusercontent.com/76799354/185774495-25ecfdc5-30e3-4493-b783-de21f790cae9.mp4  
 단어를 선택하고 오른쪽에 색상을 누르면 빈칸 색상 변경 가능합니다.
+
+# 단어 삭제
+단어를 선택하고 Backspace 또는 Delete 키를 누르면 단어가 삭제됩니다.
