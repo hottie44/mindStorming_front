@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mindStorming_front/static/css/main.80dd9904.css",
-    "main.js": "/mindStorming_front/static/js/main.ba699516.js",
+    "main.js": "/mindStorming_front/static/js/main.f28fb16b.js",
     "static/js/787.9bceab2b.chunk.js": "/mindStorming_front/static/js/787.9bceab2b.chunk.js",
     "index.html": "/mindStorming_front/index.html",
     "main.80dd9904.css.map": "/mindStorming_front/static/css/main.80dd9904.css.map",
-    "main.ba699516.js.map": "/mindStorming_front/static/js/main.ba699516.js.map",
+    "main.f28fb16b.js.map": "/mindStorming_front/static/js/main.f28fb16b.js.map",
     "787.9bceab2b.chunk.js.map": "/mindStorming_front/static/js/787.9bceab2b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80dd9904.css",
-    "static/js/main.ba699516.js"
+    "static/js/main.f28fb16b.js"
   ]
 }
