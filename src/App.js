@@ -28,7 +28,7 @@ function App() {
   `;
 
   return (
-    <div className="App" style={{ color: "#343736", backgroundColor: "#F2F3F3", width: "100%", height: 800, color: theme.colors.Text }}>
+    <div className="App" style={{ color: "#343736", backgroundColor: "#F2F3F3", width: "100%", height: 800, color: `${theme.colors.Text}` }}>
       <div className="logo">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
           <g clip-path="url(#clip0_135_4944)">

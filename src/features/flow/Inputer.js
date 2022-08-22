@@ -7,8 +7,11 @@ import { findRecommendedWordAsync, nodes, selectedId, selectedId as selId, SetTe
 
 const InputerContainer = styled(theme.ShadowBox)`
     position: fixed;
+    width: min(calc(100vw - 40px), 465px);
+    box-sizing: border-box;
     bottom: 107px;
     right: 20px;
+    margin-left: 20px;
     background-color: white;
     padding: 14px 20px 10px 20px;
     border-radius: 20px;
@@ -17,7 +20,8 @@ const InputerContainer = styled(theme.ShadowBox)`
 
 const InputerInput = styled.input`
     font-size: 18px;
-    width: 413px;
+    width: 100%;
+    min-width: 30px;
     max-width: 413px;
     padding: 0 6px 4px 6px;
     border: 0;

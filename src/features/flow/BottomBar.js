@@ -72,10 +72,6 @@ const ButtonsContainer = styled.div`
     align-items: center;
 `;
 
-const Bar = styled.div`
-    
-`;
-
 const ScrollButton = styled.div`
     display: flex;
     align-items: center;
@@ -97,8 +93,6 @@ const PlusButton = styled.div`
 `;
 
 function BottomBar() {
-    const dispatch = useDispatch();
-
     const createFunc = useSelector(createNodeFunction);
 
     // const selectedId = useSelector(selId);
@@ -143,7 +137,6 @@ function BottomBar() {
                             <path d="M8.91 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91 4.08008" stroke="#6D7A79" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </ScrollButton>
-                    <div></div>
                     <PlusButton onClick={() => createFunc("")}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

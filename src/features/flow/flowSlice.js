@@ -10,7 +10,7 @@ function uuidv4() {
 
 export const uuid = uuidv4();
 
-const ws = new WebSocket("ws://20.25.156.162:8000/connect/" + uuid);
+const ws = new WebSocket("wss://hottie.winty.io/connect/" + uuid);
 
 ws.onopen = function (event) {
     console.log(event);
@@ -38,7 +38,7 @@ export const findRecommendedWordAsync = createAsyncThunk(
     "flow/findRecommendedWordAsync",
     async word => {
         console.log("findRecommendedWordAsync", word);
-        let res = await fetch('http://20.25.156.162:8000/word', {
+        let res = await fetch('https://hottie.winty.io/word', {
             method: 'POST', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ export const findRecommendedWordAsync = createAsyncThunk(
 export const createNewNode = createAsyncThunk(
     "flow/createNewNode",
     async data => {
-        await fetch('http://20.25.156.162:8000/node/create', {
+        await fetch('https://hottie.winty.io/node/create', {
             method: 'POST', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ export const updateNode = createAsyncThunk(
         if (data.label) body.label = data.label;
         if (data.color) body.color = data.color;
 
-        await fetch('http://20.25.156.162:8000/node/update', {
+        await fetch('https://hottie.winty.io/node/update', {
             method: 'POST', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export const updateNode = createAsyncThunk(
 export const removeNode = createAsyncThunk(
     "flow/removeNode",
     async data => {
-        await fetch('http://20.25.156.162:8000/node/remove', {
+        await fetch('https://hottie.winty.io/node/remove', {
             method: 'POST', // 또는 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -184,6 +184,7 @@ export const selectedColor = state => state.flow.selectedColor;
 export const createNodeFunction = state => state.flow.createNodeFunction;
 export const textSelectFunction = state => state.flow.textSelectFunction;
 
+let init = false;
 ws.onmessage = function (event) {
 
     let data = JSON.parse(event.data);
@@ -192,7 +193,13 @@ ws.onmessage = function (event) {
 
     store.dispatch(updateNodes(data.nodes));
     store.dispatch(updateEdges(data.edges));
-    store.dispatch(SetTextFunc(data.nodes));
+    // store.dispatch(SetTextFunc(data.nodes));
+
+    if (!init) {
+        store.dispatch(findRecommendedWordAsync(data.nodes[0].data.label));
+        store.dispatch(textSelectFunction(data.nodes[0].data.label));
+        init = true;
+    }
 }
 
 export default flowSlice.reducer;

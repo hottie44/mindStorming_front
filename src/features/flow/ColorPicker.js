@@ -9,7 +9,7 @@ import theme from '../../theme/theme';
 const ColorPickperRootContainer = styled(theme.ShadowBox, theme.UI)`
     position: fixed;
     right: 20px;
-    top: 50%;
+    top: min(50%, max(100vh - 300px, 120px));;
     transform: translate(0, -50%);
     width: 42px;
     display: flex;
@@ -18,7 +18,7 @@ const ColorPickperRootContainer = styled(theme.ShadowBox, theme.UI)`
     align-items: center;
     padding: 20px 0;
     background-color: white;
-    z-index: 2000;
+    z-index: 1000;
     border-radius: 50px;
 `;
 
