@@ -1,4 +1,4 @@
-# 링크 : http://15.164.149.120:3000/
+# 링크 : https://brainstorming.hottie.winty.io/
 
 # 단어 추가
 https://user-images.githubusercontent.com/76799354/185774490-e14341fc-ef02-458c-9926-25857a2f02d2.mp4  
