@@ -73,8 +73,7 @@ function Flow() {
             // 노드 삭제
             else if (change.type == "remove") {
                 console.log(selectedId)
-                if (selectedId != 0)
-                    dispatch(removeNode(selectedId));
+                dispatch(removeNode(selectedId));
 
                 return currentNodes;
             }
